@@ -4,6 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var cors = require("cors");
 
 const DATABASE_URI =
   "mongodb+srv://user:user@login-app.xldtd.mongodb.net/?retryWrites=true&w=majority";
@@ -14,6 +15,8 @@ var usersRouter = require("./routes/users");
 var personRouter = require("./routes/person");
 
 var app = express();
+
+app.use(cors());
 
 // mongoose connection
 mongoose

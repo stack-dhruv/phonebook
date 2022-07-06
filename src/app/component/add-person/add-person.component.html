@@ -1,1 +1,25 @@
-<p>add-person works!</p>
+<div>
+    <form #addPersonForm="ngForm" (ngSubmit)="addPerson(addPersonForm.value)">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." ngModel>
+
+        <label for="phone_number">Phone Number</label>
+        <input type="number" id="phone_number" name="phone_number" placeholder="phone_number" ngModel>
+
+        <label for="age">Last Name</label>
+        <input type="number" id="age" name="age" placeholder="age" ngModel>
+
+        <label for="group">Group</label>
+        <select id="group" name="group" ngModel>
+            <option value="family">Family</option>
+            <option value="friends">Friends</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div>
+        {{addPersonForm.value | json}}
+    </div>
+</div>

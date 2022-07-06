@@ -1,0 +1,11 @@
+.main-container {
+  display: flex;
+}
+
+.output-container {
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+}

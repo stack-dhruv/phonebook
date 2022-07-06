@@ -1,1 +1,19 @@
-<p>contact-card works!</p>
+<h1>All Contacts</h1>
+
+<div class="main-container">
+    <div *ngFor="let person of persons">
+        <div class="output-container">
+            <h3>{{person.name}}</h3>
+            <hr>
+            <label>Age: </label>
+            {{person.age}}
+            <br>
+            <label>Phone-Number: </label>
+            {{person.phone_number}}
+            <br>
+            <label>Group: </label>
+            {{person.group}}
+
+        </div>
+    </div>
+</div>

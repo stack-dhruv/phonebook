@@ -7,20 +7,18 @@ import { HeaderComponent } from './shared/header/header.component';
 import { AddPersonComponent } from './component/add-person/add-person.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ContactCardComponent } from './component/contact/contact-card/contact-card.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddPersonComponent,
     ContactComponent,
-    ContactCardComponent
+    ContactCardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
