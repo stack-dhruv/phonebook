@@ -9,3 +9,17 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: large;
 }
+
+span {
+  float: right;
+  border: 2px solid red;
+  background-color: red;
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+span:hover {
+  background-color: darkred;
+}

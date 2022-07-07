@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from 'src/app/service/contact.service';
 import { PersonModel } from 'src/app/model/person';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-add-person',
@@ -8,7 +9,10 @@ import { PersonModel } from 'src/app/model/person';
   styleUrls: ['./add-person.component.css'],
 })
 export class AddPersonComponent implements OnInit {
-  constructor(private contactSerice: ContactService) {}
+  constructor(
+    private contactSerice: ContactService,
+    private messageService: MessageService
+  ) {}
 
   addPerson(addPersonForm: any) {
     console.log('Person adding process called');
@@ -23,6 +27,7 @@ export class AddPersonComponent implements OnInit {
     console.log('Add person method from the form - ');
 
     this.contactSerice.addToDatabase(data).subscribe((response) => {
+      this.messageService.setMessage({ msg: 'Post is added', type: 'success' });
       console.log('Data added successfully :: ');
       console.log(response);
     });

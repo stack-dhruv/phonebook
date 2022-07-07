@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { ContactService } from 'src/app/service/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,9 +7,14 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  constructor() {}
+  constructor(private contactService: ContactService) {}
 
-  @Output() persons: any[] | undefined;
+  persons: any[] = [];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.contactService.readDatabase().subscribe((data) => {
+      console.log(data);
+      this.persons = data;
+    });
+  }
 }

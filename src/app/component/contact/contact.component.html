@@ -1,2 +1,4 @@
 <p>contact works!</p>
-<app-contact-card></app-contact-card>
+<div class="main-container">
+    <app-contact-card *ngFor="let person of persons" [person]="person"></app-contact-card>
+</div>

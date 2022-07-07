@@ -9,6 +9,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { ContactCardComponent } from './component/contact/contact-card/contact-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { GlobalAlertComponent } from './component/global/global-alert/global-alert.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     AddPersonComponent,
     ContactComponent,
     ContactCardComponent,
+    GlobalAlertComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

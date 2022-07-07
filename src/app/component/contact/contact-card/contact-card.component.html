@@ -1,19 +1,16 @@
-<h1>All Contacts</h1>
+<div class="output-container">
+    <h3>{{person.name}}
+        <span (click)="deletePerson()">X</span>
+    </h3>
+    <hr>
 
-<div class="main-container">
-    <div *ngFor="let person of persons">
-        <div class="output-container">
-            <h3>{{person.name}}</h3>
-            <hr>
-            <label>Age: </label>
-            {{person.age}}
-            <br>
-            <label>Phone-Number: </label>
-            {{person.phone_number}}
-            <br>
-            <label>Group: </label>
-            {{person.group}}
+    <label>Age: </label>
+    {{person.age}}
+    <br>
+    <label>Phone-Number: </label>
+    {{person.phone_number}}
+    <br>
+    <label>Group: </label>
+    {{person.group}}
 
-        </div>
-    </div>
 </div>

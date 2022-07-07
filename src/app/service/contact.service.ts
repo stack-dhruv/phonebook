@@ -21,4 +21,8 @@ export class ContactService {
   addToDatabase(data: PersonModel): Observable<any> {
     return this.http.post<any>(BASE_URL + '/api/phonebook', data);
   }
+
+  deletePerson(id: string): Observable<any> {
+    return this.http.delete(BASE_URL + '/api/phonebook' + '/' + id);
+  }
 }
