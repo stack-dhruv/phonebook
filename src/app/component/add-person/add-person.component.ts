@@ -20,15 +20,12 @@ export class AddPersonComponent implements OnInit {
       person.group
     );
 
-    console.log(person);
+    console.log('Add person method from the form - ');
 
-    this.contactSerice
-      .addToDatabase(data)
-      .subscribe((response) => {
-        console.log('Data added successfully :: ');
-        console.log(response);
-      })
-      .unsubscribe();
+    this.contactSerice.addToDatabase(data).subscribe((response) => {
+      console.log('Data added successfully :: ');
+      console.log(response);
+    });
   }
 
   ngOnInit(): void {}

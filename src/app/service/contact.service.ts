@@ -19,7 +19,6 @@ export class ContactService {
   }
 
   addToDatabase(data: PersonModel): Observable<any> {
-    console.log('Program');
     return this.http.post<any>(BASE_URL + '/api/phonebook', data);
   }
 }

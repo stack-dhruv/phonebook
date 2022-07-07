@@ -13,7 +13,6 @@ const PersonSchema = new schema({
   phone_number: {
     type: Number,
     required: true,
-    unique: true,
   },
   group: {
     type: String,
