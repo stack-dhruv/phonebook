@@ -15,22 +15,27 @@ export class AddPersonComponent implements OnInit {
   ) {}
 
   addPerson(addPersonForm: any) {
-    console.log('Person adding process called');
-    const person = addPersonForm;
-    const data: PersonModel = new PersonModel(
-      person.name,
-      person.age,
-      person.phone_number,
-      person.group
-    );
+    if (addPersonForm.valid) {
+      console.log('Person adding process called');
+      const person = addPersonForm.value;
+      const data: PersonModel = new PersonModel(
+        person.name,
+        person.age,
+        person.phone_number,
+        person.group
+      );
 
-    console.log('Add person method from the form - ');
+      console.log('Add person method from the form - ');
 
-    this.contactSerice.addToDatabase(data).subscribe((response) => {
-      this.messageService.setMessage({ msg: 'Post is added', type: 'success' });
-      console.log('Data added successfully :: ');
-      console.log(response);
-    });
+      this.contactSerice.addToDatabase(data).subscribe((response) => {
+        this.messageService.setMessage({
+          msg: 'Post is added',
+          type: 'success',
+        });
+        console.log('Data added successfully :: ');
+        console.log(response);
+      });
+    }
   }
 
   ngOnInit(): void {}
