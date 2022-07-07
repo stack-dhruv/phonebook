@@ -1,26 +1,52 @@
-<div>
-    <form #addPersonForm="ngForm" (ngSubmit)="addPerson(addPersonForm)">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name.." ngModel required>
-
-        <label for="phone_number">Phone Number</label>
-        <input type="number" id="phone_number" name="phone_number" placeholder="phone_number" ngModel required
-            [maxLength]="10">
-
-        <label for="age">Age</label>
-        <input type="number" id="age" name="age" placeholder="age" ngModel required [maxlength]="2">
-
-        <label for="group">Group</label>
-        <select id="group" name="group" ngModel [required]="true">
-            <option value="family">Family</option>
-            <option value="friends">Friends</option>
-            <option value="other">Other</option>
-        </select>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <div>
-        {{addPersonForm.value | json}}
+<form (submit)="addPerson(thisForm)" #thisForm="ngForm">
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>ADD NEW</span>
+                            <span>PERSON</span>
+                        </div>
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" id="name" name="name"
+                                    placeholder="Your name.." ngModel required>
+                            </div>
+                            <div class="app-form-group">
+                                <input type="number" id="phone_number" name="phone_number" placeholder="phone_number"
+                                    class="app-form-control" ngModel required [maxLength]="10">
+                            </div>
+                            <div class="app-form-group">
+                                <input type="number" id="age" name="age" placeholder="age" ngModel required
+                                    [maxlength]="2" class="app-form-control">
+                            </div>
+                            <div class="app-form-group message">
+                                <input ngModel class="app-form-control" type="text" placeholder="Group" name="group">
+                            </div>
+                            <div class="app-form-group buttons">
+                                <button class="app-form-button" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</form>
+
+<div>{{thisForm.value | json}}</div>
