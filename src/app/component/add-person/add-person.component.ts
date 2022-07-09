@@ -14,6 +14,10 @@ export class AddPersonComponent implements OnInit {
     private messageService: MessageService
   ) {}
 
+  addNewUser() {
+    const thisForm = document.getElementById('thisForm');
+  }
+
   addPerson(addPersonForm: any) {
     if (addPersonForm.valid) {
       console.log('Person adding process called');

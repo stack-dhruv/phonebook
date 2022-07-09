@@ -1,3 +1,7 @@
 .main-container {
   display: flex;
 }
+#contacts {
+  margin-left: 5px;
+  font-size: 2rem;
+}

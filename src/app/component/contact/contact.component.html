@@ -1,4 +1,11 @@
-<p>contact works!</p>
+<blockquote class="text-2xl font-semibold italic text-center text-slate-900" id="contacts">
+    All
+    <span
+        class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+        <span class="relative text-white">Contacts</span>
+    </span>
+</blockquote>
+<br>
 <div class="main-container">
     <app-contact-card *ngFor="let person of persons" [person]="person"></app-contact-card>
 </div>

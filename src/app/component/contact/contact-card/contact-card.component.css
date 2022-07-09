@@ -10,13 +10,8 @@
   font-size: large;
 }
 
-span {
+i {
   float: right;
-  border: 2px solid red;
-  background-color: red;
-  color: aliceblue;
-  padding: 5px;
-  border-radius: 5px;
   cursor: pointer;
 }
 
