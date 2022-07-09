@@ -10,6 +10,7 @@ import { ContactCardComponent } from './component/contact/contact-card/contact-c
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { GlobalAlertComponent } from './component/global/global-alert/global-alert.component';
+import { HomeComponent } from './component/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { GlobalAlertComponent } from './component/global/global-alert/global-ale
     ContactComponent,
     ContactCardComponent,
     GlobalAlertComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
